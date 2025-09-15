@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Community Manager</title>
+    <!-- Incluir Tailwind CSS para un diseño moderno y responsive -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Sección del Menú/Navegación -->
+    <header class="p-6">
+        <nav class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">
+                <a href="#inicio" class="hover:text-white transition duration-300">
+                    [Tu cliente]
+                </a>
+            </div>
+            <ul class="hidden md:flex space-x-6 text-sm font-medium">
+                <li><a href="#inicio" class="hover:text-white transition duration-300">Inicio</a></li>
+                <li><a href="#sobremi" class="hover:text-white transition duration-300">Sobre Mí</a></li>
+                <li><a href="#portafolio" class="hover:text-white transition duration-300">Portafolio</a></li>
+                <li><a href="#habilidades" class="hover:text-white transition duration-300">Habilidades</a></li>
+                <li><a href="#contacto" class="hover:text-white transition duration-300">Contacto</a></li>
+            </ul>
+            <!-- Botón de menú para móvil -->
+            <button class="md:hidden text-2xl focus:outline-none">
+                &#9776;
+            </button>
+        </nav>
+    </header>
+
+    <!-- Sección Principal (Hero) -->
+    <section id="inicio" class="py-20 md:py-32 text-center">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
+                Impulso tu marca <br class="hidden sm:block">en las redes sociales
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+                Soy un Community Manager con experiencia en [tu cliente] y en la creación de estrategias que generan resultados tangibles y crecimiento para tu negocio.
+            </p>
+            <a href="#contacto" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300">
+                Hablemos de tu proyecto
+            </a>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Mí -->
+    <section id="sobremi" class="py-16 bg-[#161b22]">
+        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div class="md:order-last">
+                <img src="https://placehold.co/500x500/0d1117/c9d1d9?text=Tu+Foto" alt="Foto de [Tu cliente]" class="rounded-3xl shadow-lg w-full h-auto object-cover">
+            </div>
+            <div class="text-left">
+                <h2 class="text-3xl font-bold mb-4">Sobre Mí</h2>
+                <p class="text-gray-400 leading-relaxed mb-4">
+                    [Tu cliente] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <p class="text-gray-400 leading-relaxed">
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Portafolio -->
+    <section id="portafolio" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Mi Portafolio</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Tarjeta de Proyecto 1 -->
+                <div class="bg-[#161b22] rounded-3xl p-6 shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/0d1117/c9d1d9?text=Proyecto+1" alt="Imagen del Proyecto 1" class="rounded-2xl mb-4 w-full h-auto">
+                    <h3 class="text-xl font-semibold mb-2">Campaña de Lanzamiento</h3>
+                    <p class="text-sm text-gray-400">
+                        Estrategia de contenido y gestión de comunidad para una marca de ropa.
+                    </p>
+                    <div class="mt-4 text-sm font-semibold text-blue-400">
+                        Resultados: Aumento del 300% en engagement.
+                    </div>
+                </div>
+
+                <!-- Tarjeta de Proyecto 2 -->
+                <div class="bg-[#161b22] rounded-3xl p-6 shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/0d1117/c9d1d9?text=Proyecto+2" alt="Imagen del Proyecto 2" class="rounded-2xl mb-4 w-full h-auto">
+                    <h3 class="text-xl font-semibold mb-2">Crecimiento de Marca Personal</h3>
+                    <p class="text-sm text-gray-400">
+                        Creación de contenido educativo y posicionamiento para un coach.
+                    </p>
+                    <div class="mt-4 text-sm font-semibold text-blue-400">
+                        Resultados: +5,000 nuevos seguidores en 2 meses.
+                    </div>
+                </div>
+
+                <!-- Tarjeta de Proyecto 3 -->
+                <div class="bg-[#161b22] rounded-3xl p-6 shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/0d1117/c9d1d9?text=Proyecto+3" alt="Imagen del Proyecto 3" class="rounded-2xl mb-4 w-full h-auto">
+                    <h3 class="text-xl font-semibold mb-2">Gestión de Crisis y Reputación</h3>
+                    <p class="text-sm text-gray-400">
+                        Manejo de comentarios negativos y mejora de la imagen online de un restaurante.
+                    </p>
+                    <div class="mt-4 text-sm font-semibold text-blue-400">
+                        Resultados: Disminución del 90% en menciones negativas.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Habilidades -->
+    <section id="habilidades" class="py-16 bg-[#161b22]">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">Habilidades y Herramientas</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-3xl mx-auto">
+                <div class="bg-[#0d1117] p-4 rounded-xl text-center shadow-md">Estrategia de Contenido</div>
+                <div class="bg-[#0d1117] p-4 rounded-xl text-center shadow-md">Gestión de Comunidades</div>
+                <div class="bg-[#0d1117] p-4 rounded-xl text-center shadow-md">Análisis de Métricas</div>
+                <div class="bg-[#0d1117] p-4 rounded-xl text-center shadow-md">Canva & Figma</div>
+                <div class="bg-[#0d1117] p-4 rounded-xl text-center shadow-md">Hootsuite & Buffer</div>
+                <div class="bg-[#0d1117] p-4 rounded-xl text-center shadow-md">Copywriting</div>
+                <div class="bg-[#0d1117] p-4 rounded-xl text-center shadow-md">Resolución de Crisis</div>
+                <div class="bg-[#0d1117] p-4 rounded-xl text-center shadow-md">Google Analytics</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Testimonios -->
+    <section class="py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">Lo que dicen mis clientes</h2>
+            <div class="max-w-xl mx-auto space-y-8">
+                <div class="bg-[#161b22] p-8 rounded-3xl shadow-xl">
+                    <p class="italic text-gray-300 mb-4">"Trabajar con [tu cliente] fue una experiencia increíble. No solo entendió nuestra marca, sino que superó nuestras expectativas con un aumento del 250% en nuestras interacciones."</p>
+                    <div class="font-semibold text-white">María López, CEO de Fashionalia</div>
+                </div>
+                <div class="bg-[#161b22] p-8 rounded-3xl shadow-xl">
+                    <p class="italic text-gray-300 mb-4">"Su capacidad para crear contenido relevante y su profesionalismo en cada paso del proceso nos generaron un crecimiento enorme y constante. Totalmente recomendado."</p>
+                    <div class="font-semibold text-white">Juan Pérez, Fundador de Tech Innova</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="py-16 md:py-24 bg-[#161b22] text-center">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h2 class="text-3xl font-bold mb-4">¡Trabajemos juntos!</h2>
+            <p class="text-gray-400 mb-8">
+                Estoy listo para ayudarte a llevar tu marca al siguiente nivel. Completa el formulario o contáctame directamente.
+            </p>
+            <div class="bg-[#0d1117] p-8 rounded-3xl shadow-2xl">
+                <form>
+                    <div class="mb-4">
+                        <input type="text" placeholder="Tu nombre" class="w-full p-3 rounded-lg bg-[#21262d] text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div class="mb-4">
+                        <input type="email" placeholder="Tu correo electrónico" class="w-full p-3 rounded-lg bg-[#21262d] text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div class="mb-6">
+                        <textarea placeholder="Cuéntame sobre tu proyecto" rows="4" class="w-full p-3 rounded-lg bg-[#21262d] text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition duration-300">
+                        Enviar Mensaje
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="py-8 text-center text-sm text-gray-500">
+        <p>&copy; 2024 [Tu cliente]. Todos los derechos reservados.</p>
+        <p class="mt-2">
+            Hecho con ❤️ para un Community Manager
+        </p>
+    </footer>
+
+</body>
+</html>
