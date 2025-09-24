@@ -13,27 +13,28 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
+            background-color: #fff;
+            color: #fff;
         }
     </style>
 </head>
-<body class="antialiased">
-
+<body class="antialiased" >
+<img src="templates/imagenes/imagen_1.png" class="absolute z-0 w-full bg-#1e2642da opacity-75 object-cover bg-gray-800 overflow-hidden" alt="">
     <!-- Sección del Menú/Navegación -->
-    <header class="p-6">
-        <nav class="container mx-auto flex justify-between items-center">
+    <header class="p-6 relative bg-#1e2642da opacity-90" >
+        <nav class="other bg-#1e2642da">
             <div class="text-2xl font-bold">
-                <a href="#inicio" class="titles">
+                <a href="#inicio" class="titles bg-blue-600">
                     Edge Net
                 </a>
             </div>
             <ul class="hidden md:flex space-x-6 text-sm font-medium">
-                <li><a href="#inicio" class="titles">Inicio</a></li>
-                <li><a href="#sobremi" class="titles">Sobre Mí</a></li>
-                <li><a href="#portafolio" class="titles">Portafolio</a></li>
-                <li><a href="#habilidades" class="titles">Habilidades</a></li>
-                <li><a href="#contacto" class="titles">Contacto</a></li>
+                <li><a href="#inicio" class="titles bg-blue-600">Inicio</a></li>
+                <li><a href="#sobremi" class="titles bg-blue-600">Sobre Mí</a></li>
+                <li><a href="#portafolio" class="titles bg-blue-600">Portafolio</a></li>
+                <li><a href="#habilidades" class="titles bg-blue-600">Habilidades</a></li>
+                <li><a href="#contacto" class="titles bg-blue-600">Contacto</a></li>
+                <li><a href="" class="titles bg-blue-600">Presupuesto</a></li>
             </ul>
             <!-- Botón de menú para móvil -->
             <button class="md:hidden text-2xl focus:outline-none">
@@ -43,8 +44,8 @@
     </header>
 
     <!-- Sección Principal (Hero) -->
-    <section id="inicio" class="py-20 md:py-32 text-center">
-        <div class="container mx-auto px-4">
+    <section id="inicio" class="heder relative">
+        <div class="container mx-auto px-4 ">
             <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
                 Impulso tu marca <br class="hidden sm:block">en las redes sociales
             </h1>
@@ -58,31 +59,32 @@
     </section>
 
     <!-- Sección Sobre Mí -->
-    <section id="sobremi" class="py-16 bg-[#161b22]">
+    <section id="sobremi" class="py-16 bg-[#ff]  relative">
         <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
             <div class="md:order-last">
-                <img src="https://placehold.co/500x500/0d1117/c9d1d9?text=Tu+Foto" alt="Foto de [Tu cliente]" class="rounded-3xl shadow-lg w-full h-auto object-cover">
+                <img src="templates/imagenes/img-nos.jpg" alt="Foto de [Tu cliente]" class="rounded-3xl shadow-lg w-full h-auto object-cover">
             </div>
-            <div class="text-left">
+            <div class="text-left bg-[#0c1e30] p-5 rounded-3xl shadow-xl">
                 <h2 class="text-3xl font-bold mb-4">Sobre Mí</h2>
-                <p class="text-gray-400 leading-relaxed mb-4">
+                <p class="text-gray-400 leading-relaxed mb-4 ">
                     [Tu cliente] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
-                <p class="text-gray-400 leading-relaxed">
+                <p class="text-gray-400 leading-relaxed ">
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
+                Tu foto
             </div>
         </div>
     </section>
 
     <!-- Sección de Portafolio -->
-    <section id="portafolio" class="py-16">
+    <section id="portafolio" class="py-16 relative ">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Mi Portafolio</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-black">Mi Portafolio</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <!-- Tarjeta de Proyecto 1 -->
-                <div class="bg-[#161b22] rounded-3xl p-6 shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                <div class="bg-[#000] rounded-3xl p-6 shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
                     <img src="https://placehold.co/600x400/0d1117/c9d1d9?text=Proyecto+1" alt="Imagen del Proyecto 1" class="rounded-2xl mb-4 w-full h-auto">
                     <h3 class="text-xl font-semibold mb-2">Campaña de Lanzamiento</h3>
                     <p class="text-sm text-gray-400">
@@ -94,7 +96,7 @@
                 </div>
 
                 <!-- Tarjeta de Proyecto 2 -->
-                <div class="bg-[#161b22] rounded-3xl p-6 shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                <div class="bg-[#0c1e30] rounded-3xl p-6 shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105 relative">
                     <img src="https://placehold.co/600x400/0d1117/c9d1d9?text=Proyecto+2" alt="Imagen del Proyecto 2" class="rounded-2xl mb-4 w-full h-auto">
                     <h3 class="text-xl font-semibold mb-2">Crecimiento de Marca Personal</h3>
                     <p class="text-sm text-gray-400">
@@ -106,7 +108,7 @@
                 </div>
 
                 <!-- Tarjeta de Proyecto 3 -->
-                <div class="bg-[#161b22] rounded-3xl p-6 shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                <div class="bg-[#000] rounded-3xl p-6 shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
                     <img src="https://placehold.co/600x400/0d1117/c9d1d9?text=Proyecto+3" alt="Imagen del Proyecto 3" class="rounded-2xl mb-4 w-full h-auto">
                     <h3 class="text-xl font-semibold mb-2">Gestión de Crisis y Reputación</h3>
                     <p class="text-sm text-gray-400">

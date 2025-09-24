@@ -1,12 +1,33 @@
 .titles{
-    font-size: 1rem;
+    float: right;
+    background-color: rgb(0, 57, 189);
+    font-size: 0,5rem;
     font-weight: 500;
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 0.375rem; /* Rounded corners */
     transition:duration-300;
+    box-shadow: 0 0 5px rgb(15, 71, 126); /* Subtle shadow */
 }
 .titles:hover{
     color: white;
 
+}
+.p-6{
+    background-color:rgba(16, 20, 59);
+}
+.heder{
+    text-align: center;
+    padding: 40px;
+    background-color: rgba(16, 20, 59, 0.686);
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center
+.other{
+    max-width: auto;
+    max-height: auto;
+    grid: 2;
+    gap: 12;
+    align-items: center;
 }

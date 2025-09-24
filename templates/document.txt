@@ -1,0 +1,264 @@
+primetos comandos de git:
+
+C:\Users\mantunez\Documents\prollectos-profecionales>git add .
+warning: adding embedded git repository: Documents/prollectos-profecionales/Ciro-Figueroa-community-manager
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> Documents/prollectos-profecionales/Ciro-Figueroa-community-manager
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached Documents/prollectos-profecionales/Ciro-Figueroa-community-manager
+hint:
+hint: See "git help submodule" for more information.
+hint: Disable this message with "git config set advice.addEmbeddedRepo false"
+
+C:\Users\mantunez\Documents\prollectos-profecionales>git rm --cached -r Documents/prollectos-profecionales/Ciro-Figueroa-community-manager
+fatal: pathspec 'Documents/prollectos-profecionales/Ciro-Figueroa-community-manager' did not match any files
+
+C:\Users\mantunez\Documents\prollectos-profecionales>rm -rf Documents/prollectos-profecionales/Ciro-Figueroa-community-manager/.git
+"rm" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+
+C:\Users\mantunez\Documents\prollectos-profecionales>git rm -rf Documents/prollectos-profecionales/Ciro-Figueroa-community-manager/.git
+fatal: pathspec 'Documents/prollectos-profecionales/Ciro-Figueroa-community-manager/.git' did not match any files
+
+C:\Users\mantunez\Documents\prollectos-profecionales>git add .
+
+C:\Users\mantunez\Documents\prollectos-profecionales>git commit -m "Agrego proyecto Ciro-Figueroa como parte del repo principal"
+[master (root-commit) 0f65d26] Agrego proyecto Ciro-Figueroa como parte del repo principal
+ 1 file changed, 1 insertion(+)
+ create mode 160000 Documents/prollectos-profecionales/Ciro-Figueroa-community-manager
+
+C:\Users\mantunez\Documents\prollectos-profecionales>git log
+commit 0f65d267d75d45c122a72adb8c2c17f5d866c7ab (HEAD -> master)
+Author: miqueas <miqueass1188@gmail.com>
+Date:   Mon Sep 22 07:48:11 2025 -0300
+
+    Agrego proyecto Ciro-Figueroa como parte del repo principal
+
+C:\Users\mantunez\Documents\prollectos-profecionales>git add .
+
+ :\Users\mantunez\Documents\prollectos-profecionales>git commit -m "Agrego archivo para evitar error al subir en github"
+warning: could not open directory 'Configuración local/': Permission denied
+warning: could not open directory 'Cookies/': Permission denied
+warning: could not open directory 'Datos de programa/': Permission denied
+warning: could not open directory 'Documents/Mi música/': Permission denied
+warning: could not open directory 'Documents/Mis imágenes/': Permission denied
+warning: could not open directory 'Documents/Mis vídeos/': Permission denied
+warning: could not open directory 'Entorno de red/': Permission denied
+warning: could not open directory 'Impresoras/': Permission denied
+warning: could not open directory 'Menú Inicio/': Permission denied
+warning: could not open directory 'Mis documentos/': Permission denied
+warning: could not open directory 'Plantillas/': Permission denied
+warning: could not open directory 'Reciente/': Permission denied
+warning: could not open directory 'SendTo/': Permission denied
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   Ciro-Figueroa-community-manager (modified content, untracked content)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../../.gitconfig
+        ../../.idlerc/
+        ../../.lesshst
+        ../../.viminfo
+        ../../.vscode/
+        ../../AppData/
+        ../../Contacts/
+        ../../Desktop/
+        ../Asignacion de Hostname.xlsx
+        ../Blocs de notas de OneNote/
+        ../Buenas tardes.docx
+        ../Default.rdp
+        ../Epic Games Launcher.lnk
+        ../Estandar descargar-MX.xlsx
+        ../Estandar/
+        "../FR-PP-CAL-001-001-R2 Baja de Equipos en Sistemas de Gesti\303\263n TI.docx"
+        ../Libro1.xlsx
+        ../My Games/
+        ../Preventivos.txt
+        ../Reunion semanal.xlsx
+        ../carpeta privada/
+        ../cartel (DESECHOS TECNOLOGICOS).docx
+        ../cartel (INICIALES).docx
+        ../cartel (STOCK  DE TI).docx
+        ../desktop.ini
+        ../estandar wifi impresora.xlsx
+        ../ingles/
+        ../mapeo (1).bat
+        ../my-first-repo-of-git/
+        ../plantillas/
+        ../portafolio/
+        ../pront CV.txt
+        ../../Downloads/
+        ../../Favorites/
+        ../../Links/
+        ../../Microsoft/
+        ../../Music/
+        ../../NTUSER.DAT
+        ../../NTUSER.DAT{9bff9dc9-0ac0-11f0-9991-7008947e846e}.TM.blf
+        ../../NTUSER.DAT{9bff9dc9-0ac0-11f0-9991-7008947e846e}.TMContainer00000000000000000001.regtrans-ms
+        ../../NTUSER.DAT{9bff9dc9-0ac0-11f0-9991-7008947e846e}.TMContainer00000000000000000002.regtrans-ms
+        ../../Pictures/
+        ../../Saved Games/
+        ../../Searches/
+        ../../Videos/
+        ../../advanced_ip_scanner_MAC.bin
+        ../../curseforge/
+        ../../ntuser.dat.LOG1
+        ../../ntuser.dat.LOG2
+        ../../ntuser.ini
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\mantunez\Documents\prollectos-profecionales>Cd Ciro-Figueroa-community-manager
+
+C:\Users\mantunez\Documents\prollectos-profecionales\Ciro-Figueroa-community-manager>cd C:\Users\mantunez\Documents\prollectos-profecionales
+
+C:\Users\mantunez\Documents\prollectos-profecionales>rmdir /s /q .git
+El sistema no puede encontrar el archivo especificado.
+
+C:\Users\mantunez\Documents\prollectos-profecionales>cd C:\Users\mantunez\Documents\prollectos-profecionales
+
+C:\Users\mantunez\Documents\prollectos-profecionales>rmdir /s /q .git
+El sistema no puede encontrar el archivo especificado.
+
+C:\Users\mantunez\Documents\prollectos-profecionales>
+C:\Users\mantunez\Documents\prollectos-profecionales>git add .
+
+C:\Users\mantunez\Documents\prollectos-profecionales>git commit -m "Agrego archivo para evitar error al subir en github"
+warning: could not open directory 'Configuración local/': Permission denied
+warning: could not open directory 'Cookies/': Permission denied
+warning: could not open directory 'Datos de programa/': Permission denied
+warning: could not open directory 'Documents/Mi música/': Permission denied
+warning: could not open directory 'Documents/Mis imágenes/': Permission denied
+warning: could not open directory 'Documents/Mis vídeos/': Permission denied
+warning: could not open directory 'Entorno de red/': Permission denied
+warning: could not open directory 'Impresoras/': Permission denied
+warning: could not open directory 'Menú Inicio/': Permission denied
+warning: could not open directory 'Mis documentos/': Permission denied
+warning: could not open directory 'Plantillas/': Permission denied
+warning: could not open directory 'Reciente/': Permission denied
+warning: could not open directory 'SendTo/': Permission denied
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   Ciro-Figueroa-community-manager (modified content, untracked content)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../../.gitconfig
+        ../../.idlerc/
+        ../../.lesshst
+        ../../.viminfo
+        ../../.vscode/
+        ../../AppData/
+        ../../Contacts/
+        ../../Desktop/
+        ../Asignacion de Hostname.xlsx
+        ../Blocs de notas de OneNote/
+        ../Buenas tardes.docx
+        ../Default.rdp
+        ../Epic Games Launcher.lnk
+        ../Estandar descargar-MX.xlsx
+        ../Estandar/
+        "../FR-PP-CAL-001-001-R2 Baja de Equipos en Sistemas de Gesti\303\263n TI.docx"
+        ../Libro1.xlsx
+        ../My Games/
+        ../Preventivos.txt
+        ../Reunion semanal.xlsx
+        ../carpeta privada/
+        ../cartel (DESECHOS TECNOLOGICOS).docx
+        ../cartel (INICIALES).docx
+        ../cartel (STOCK  DE TI).docx
+        ../desktop.ini
+        ../estandar wifi impresora.xlsx
+        ../ingles/
+        ../mapeo (1).bat
+        ../my-first-repo-of-git/
+        ../plantillas/
+        ../portafolio/
+        ../pront CV.txt
+        ../../Downloads/
+        ../../Favorites/
+        ../../Links/
+        ../../Microsoft/
+        ../../Music/
+        ../../NTUSER.DAT
+        ../../NTUSER.DAT{9bff9dc9-0ac0-11f0-9991-7008947e846e}.TM.blf
+        ../../NTUSER.DAT{9bff9dc9-0ac0-11f0-9991-7008947e846e}.TMContainer00000000000000000001.regtrans-ms
+        ../../NTUSER.DAT{9bff9dc9-0ac0-11f0-9991-7008947e846e}.TMContainer00000000000000000002.regtrans-ms
+        ../../Pictures/
+        ../../Saved Games/
+        ../../Searches/
+        ../../Videos/
+        ../../advanced_ip_scanner_MAC.bin
+        ../../curseforge/
+        ../../ntuser.dat.LOG1
+        ../../ntuser.dat.LOG2
+        ../../ntuser.ini
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\mantunez\Documents\prollectos-profecionales>cd Ciro-Figueroa-community-manager
+
+C:\Users\mantunez\Documents\prollectos-profecionales\Ciro-Figueroa-community-manager>git commit -m "Agrego archivo de reparacion"
+On branch first-branch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+        modified:   templates/styles/styles.css
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .nojekyll
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\mantunez\Documents\prollectos-profecionales\Ciro-Figueroa-community-manager>git add .
+
+C:\Users\mantunez\Documents\prollectos-profecionales\Ciro-Figueroa-community-manager>git commit -m "Agrego archivo de reparación y actualizo index y estilos"
+[first-branch 1695509] Agrego archivo de reparación y actualizo index y estilos
+ 3 files changed, 20 insertions(+), 7 deletions(-)
+ create mode 100644 .nojekyll
+
+C:\Users\mantunez\Documents\prollectos-profecionales\Ciro-Figueroa-community-manager>git remote add origin https://github.com/tuwebargent-dev/ciro-figueroa-presentacion-profecional.git
+error: remote origin already exists.
+
+C:\Users\mantunez\Documents\prollectos-profecionales\Ciro-Figueroa-community-manager>git remote -v
+origin  https://github.com/tuwebargent-dev/ciro-figueroa-presentacion-profecional.git (fetch)
+origin  https://github.com/tuwebargent-dev/ciro-figueroa-presentacion-profecional.git (push)
+
+C:\Users\mantunez\Documents\prollectos-profecionales\Ciro-Figueroa-community-manager>git branch -M main
+
+C:\Users\mantunez\Documents\prollectos-profecionales\Ciro-Figueroa-community-manager>git push -u origin main
+remote: {"auth_status":"access_denied_to_user","body":"Permission to tuwebargent-dev/ciro-figueroa-presentacion-profecional.git denied to gr0ne."}
+fatal: unable to access 'https://github.com/tuwebargent-dev/ciro-figueroa-presentacion-profecional.git/': The requested URL returned error: 403
+
+C:\Users\mantunez\Documents\prollectos-profecionales\Ciro-Figueroa-community-manager>git push -u origin main
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (14/14), 4.18 KiB | 475.00 KiB/s, done.
+Total 14 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/tuwebargent-dev/ciro-figueroa-presentacion-profecional.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+C:\Users\mantunez\Documents\prollectos-profecionales\Ciro-Figueroa-community-manager>
+depurar information
+
+los estilos estan echos en Tailwind 
