@@ -1,21 +1,22 @@
 .titles{
     float: right;
-    background-color: rgb(0, 57, 189);
     font-size: 0,5rem;
     font-weight: 500;
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 0.375rem; /* Rounded corners */
-    transition:duration-300;
-    box-shadow: 0 0 5px rgb(15, 71, 126); /* Subtle shadow */
+    box-shadow: 0 0 10px black; /* Subtle shadow */
+    transition: all 0.5s ease;
 }
 .titles:hover{
     color: white;
+    box-shadow:  0 0 10px rgb(37, 28, 131);
 
 }
 .p-6{
-    background-color:rgba(16, 20, 59);
+    background-color:rgba(16, 20, 59, 126);
 }
+
 .heder{
     text-align: center;
     padding: 40px;

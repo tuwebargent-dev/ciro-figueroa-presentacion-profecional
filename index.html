@@ -19,22 +19,22 @@
     </style>
 </head>
 <body class="antialiased" >
-<img src="templates/imagenes/imagen_2.png" class="absolute z-0 w-full bg-#1e2642da opacity-75 object-cover bg-gray-800 overflow-hidden" alt="">
+<img src="templates/imagenes/imagen_2.png" class="blur-md absolute z-0 w-full bg-#1e2642da opacity-75 object-cover bg-gray-800 overflow-hidden blur(80px)" alt="">
     <!-- Sección del Menú/Navegación -->
-    <header class="p-6 relative bg-#1e2642da opacity-90" >
-        <nav class="other bg-#1e2642da">
+    <header class="p-6 relative bg-#1e2642da opacity-90 hover:[box-shadow:0_0px_15px_10px_rgba(0,0,0,0.5)] transition duration-300" >
+        <nav class="other bg-#1e2642da ">
             <div class="text-2xl font-bold">
-                <a href="#inicio" class="titles bg-blue-600">
+                <a href="#inicio" class="titles bg-blue-600 ">
                     Edge Net
                 </a>
             </div>
-            <ul class="hidden md:flex space-x-6 text-sm font-medium">
-                <li><a href="#inicio" class="titles bg-blue-600">Inicio</a></li>
-                <li><a href="#sobremi" class="titles bg-blue-600">Sobre Mí</a></li>
-                <li><a href="#portafolio" class="titles bg-blue-600">Portafolio</a></li>
-                <li><a href="#habilidades" class="titles bg-blue-600">Habilidades</a></li>
-                <li><a href="#contacto" class="titles bg-blue-600">Contacto</a></li>
-                <li><a href="" class="titles bg-blue-600">Presupuesto</a></li>
+            <ul class=" hidden md:flex space-x-6 text-sm font-medium">
+                <li><a href="#inicio" class="titles">Inicio</a></li>
+                <li><a href="#sobremi" class="titles ">Sobre Mí</a></li>
+                <li><a href="#portafolio" class="titles ">Portafolio</a></li>
+                <li><a href="#habilidades" class="titles ">Habilidades</a></li>
+                <li><a href="#contacto" class="titles ">Contacto</a></li>
+                <li><a href="" class="titles ">Presupuesto</a></li>
             </ul>
             <!-- Botón de menú para móvil -->
             <button class="md:hidden text-2xl focus:outline-none">
@@ -44,7 +44,7 @@
     </header>
 
     <!-- Sección Principal (Hero) -->
-    <section id="inicio" class="heder relative">
+    <section id="inicio" class="heder relative mb-20">
         <div class="container mx-auto px-4 ">
             <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
                 Impulso tu marca <br class="hidden sm:block">en las redes sociales
@@ -52,7 +52,7 @@
             <p class="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
                 Soy un Community Manager con experiencia en [tu cliente] y en la creación de estrategias que generan resultados tangibles y crecimiento para tu negocio.
             </p>
-            <a href="#contacto" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300">
+            <a href="#contacto" class=" inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300">
                 Hablemos de tu proyecto
             </a>
         </div>
