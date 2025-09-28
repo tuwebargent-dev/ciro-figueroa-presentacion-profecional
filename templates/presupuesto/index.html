@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Presupuestos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="temlates/styile.css">
+</head>
+<body class="text-white flex items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-3xl mx-auto">
+        
+        <header class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold mb-2">Calcula tu Presupuesto</h1>
+            <p class="text-lg text-gray-400">Elige los servicios que necesitas para tu próximo proyecto.</p>
+        </header>
+
+        <main id="app-container" class="form-container p-6 sm:p-8 rounded-2xl shadow-2xl shadow-black/30">
+
+            <!-- Paso 1: Correo -->
+            <div id="step-email" class="mb-6">
+                <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Paso 1: Ingresa tu correo electrónico</label>
+                <input type="email" id="email" placeholder="tu@correo.com" class="w-full bg-gray-800/50 border border-gray-600 rounded-lg py-3 px-4 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition duration-200">
+                <p id="email-error" class="text-red-400 text-sm mt-1 hidden">Por favor, ingresa un correo válido.</p>
+            </div>
+
+            <!-- Paso 2: Tipo de Servicio -->
+            <div id="step-service-type" class="mb-6">
+                <h2 class="block text-sm font-medium text-gray-300 mb-3">Paso 2: ¿Qué tipo de servicio necesitas?</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <label class="p-4 bg-gray-800/50 border border-gray-600 rounded-lg cursor-pointer hover:bg-gray-700/60 transition has-[:checked]:border-blue-500 has-[:checked]:ring-2 has-[:checked]:ring-blue-500">
+                        <input type="radio" name="serviceType" value="web" class="hidden">
+                        <h3 class="font-semibold text-lg">Página Web</h3>
+                        <p class="text-sm text-gray-400">Desde landing pages hasta e-commerce.</p>
+                    </label>
+                    <label class="p-4 bg-gray-800/50 border border-gray-600 rounded-lg cursor-pointer hover:bg-gray-700/60 transition has-[:checked]:border-blue-500 has-[:checked]:ring-2 has-[:checked]:ring-blue-500">
+                        <input type="radio" name="serviceType" value="cm" class="hidden">
+                        <h3 class="font-semibold text-lg">Community Manager</h3>
+                        <p class="text-sm text-gray-400">Gestión de redes, anuncios y contenido.</p>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Paso 3: Checklist (Contenedores) -->
+            <div id="step-checklist">
+                <!-- Checklist para Páginas Web -->
+                <div id="web-options" class="hidden space-y-4 fade-in">
+                    <h3 class="text-base font-medium text-gray-300 mb-2">Paso 3: Selecciona las características para tu web</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <label class="flex items-center p-3 bg-gray-800/50 rounded-lg cursor-pointer hover:bg-gray-700/60 transition"><input type="checkbox" data-price="450" class="service-item h-5 w-5 rounded border border-gray-600 bg-gray-900 custom-checkbox appearance-none mr-3"> Landing Page</label>
+                        <label class="flex items-center p-3 bg-gray-800/50 rounded-lg cursor-pointer hover:bg-gray-700/60 transition"><input type="checkbox" data-price="600" class="service-item h-5 w-5 rounded border border-gray-600 bg-gray-900 custom-checkbox appearance-none mr-3"> Blog Personal</label>
+                        <label class="flex items-center p-3 bg-gray-800/50 rounded-lg cursor-pointer hover:bg-gray-700/60 transition"><input type="checkbox" data-price="700" class="service-item h-5 w-5 rounded border border-gray-600 bg-gray-900 custom-checkbox appearance-none mr-3"> Diseño Responsive</label>
+                        <label class="flex items-center p-3 bg-gray-800/50 rounded-lg cursor-pointer hover:bg-gray-700/60 transition"><input type="checkbox" data-price="1500" class="service-item h-5 w-5 rounded border border-gray-600 bg-gray-900 custom-checkbox appearance-none mr-3"> E-commerce</label>
+                        <label class="flex items-center p-3 bg-gray-800/50 rounded-lg cursor-pointer hover:bg-gray-700/60 transition"><input type="checkbox" data-price="350" class="service-item h-5 w-5 rounded border border-gray-600 bg-gray-900 custom-checkbox appearance-none mr-3"> Optimización SEO</label>
+                        <label class="flex items-center p-3 bg-gray-800/50 rounded-lg cursor-pointer hover:bg-gray-700/60 transition"><input type="checkbox" data-price="250" class="service-item h-5 w-5 rounded border border-gray-600 bg-gray-900 custom-checkbox appearance-none mr-3"> Mantenimiento Mensual</label>
+                    </div>
+                    <textarea id="idea-web" data-price="450" class="service-item w-full bg-gray-800/50 border border-gray-600 rounded-lg mt-4 py-3 px-4 h-24 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition duration-200" placeholder="Déjanos tu idea y nosotros la hacemos realidad..."></textarea>
+                </div>
+                
+                <!-- Checklist para Community Manager -->
+                <div id="cm-options" class="hidden space-y-4 fade-in">
+                    <h3 class="text-base font-medium text-gray-300 mb-2">Paso 3: Selecciona los servicios de Community Manager</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <label class="flex items-center p-3 bg-gray-800/50 rounded-lg cursor-pointer hover:bg-gray-700/60 transition"><input type="checkbox" data-price="500" class="service-item h-5 w-5 rounded border border-gray-600 bg-gray-900 custom-checkbox appearance-none mr-3"> Creación de Videos (básico)</label>
+                        <label class="flex items-center p-3 bg-gray-800/50 rounded-lg cursor-pointer hover:bg-gray-700/60 transition"><input type="checkbox" data-price="400" class="service-item h-5 w-5 rounded border border-gray-600 bg-gray-900 custom-checkbox appearance-none mr-3"> Google Ads</label>
+                        <label class="flex items-center p-3 bg-gray-800/50 rounded-lg cursor-pointer hover:bg-gray-700/60 transition"><input type="checkbox" data-price="400" class="service-item h-5 w-5 rounded border border-gray-600 bg-gray-900 custom-checkbox appearance-none mr-3"> Social Ads (Meta)</label>
+                        <label class="flex items-center p-3 bg-gray-800/50 rounded-lg cursor-pointer hover:bg-gray-700/60 transition"><input type="checkbox" data-price="650" class="service-item h-5 w-5 rounded border border-gray-600 bg-gray-900 custom-checkbox appearance-none mr-3"> Gestión de Comunidades</label>
+                        <label class="flex items-center p-3 bg-gray-800/50 rounded-lg cursor-pointer hover:bg-gray-700/60 transition"><input type="checkbox" data-price="800" class="service-item h-5 w-5 rounded border border-gray-600 bg-gray-900 custom-checkbox appearance-none mr-3"> Estrategia de Contenido</s-item></label>
+                        <label class="flex items-center p-3 bg-gray-800/50 rounded-lg cursor-pointer hover:bg-gray-700/60 transition"><input type="checkbox" data-price="300" class="service-item h-5 w-5 rounded border border-gray-600 bg-gray-900 custom-checkbox appearance-none mr-3"> Reporte de Métricas</label>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Total y Botón -->
+        <footer class="total-container sticky bottom-4 mt-6 p-4 rounded-2xl shadow-lg flex items-center justify-between flex-wrap gap-4 z-10">
+            <div>
+                <p class="text-gray-400 text-sm">Presupuesto estimado:</p>
+                <p id="total-price" class="text-3xl font-bold">USD $0</p>
+            </div>
+            <button id="submit-quote" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 shadow-lg shadow-blue-600/30">
+                Obtener Cotización
+            </button>
+        </footer>
+
+    </div>
+
+    <!-- Modal de Confirmación -->
+    <div id="success-modal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center p-4 z-50 fade-in">
+        <div class="bg-gray-800 rounded-2xl p-8 max-w-md text-center shadow-2xl">
+            <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-500 mb-4">
+                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">¡Cotización Enviada!</h3>
+            <p class="text-gray-300 text-sm mb-4">
+                "Muchas gracias por compartirnos tu idea. Espero que tener una idea de en lo que se llega a valuar nuestro servicio te resulte razonable. Si quieres avanzar en el desarrollo de tu idea/proyecto, comunícate con nosotros a través de nuestros medios de contactos especificados en nuestra página web."
+            </p>
+            <p class="text-xs text-gray-500 mb-6">Hemos enviado una copia a tu correo.</p>
+            <button id="close-modal" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">Cerrar</button>
+        </div>
+    </div>
+
+    <script type="module" src="temlates/app.js"></script>
+</body>
+</html>
