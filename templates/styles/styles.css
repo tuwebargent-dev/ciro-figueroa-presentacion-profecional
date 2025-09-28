@@ -16,19 +16,20 @@
 .p-6{
     background-color:rgba(16, 20, 59, 126);
 }
-
-.heder{
+header{
     text-align: center;
     padding: 40px;
     background-color: rgba(16, 20, 59, 0.686);
     border-bottom-left-radius: 5%;
     border-bottom-right-radius: 5%;
 }
-container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center
 .other{
     max-width: auto;
     max-height: auto;
     grid: 2;
     gap: 12;
     align-items: center;
+}
+h2{
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
