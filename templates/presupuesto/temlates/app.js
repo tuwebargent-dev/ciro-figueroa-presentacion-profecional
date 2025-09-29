@@ -6,7 +6,7 @@ import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/1
 const firebaseConfig = {
     apiKey: "YOUR_API_KEY", // Reemplazar si es necesario
     authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID", // Reemplazar con tu Project ID
+    projectId: "page-presupuesto", // Reemplazar con tu Project ID
     storageBucket: "YOUR_STORAGE_BUCKET",
     messagingSenderId: "YOUR_SENDER_ID",
     appId: "YOUR_APP_ID"
