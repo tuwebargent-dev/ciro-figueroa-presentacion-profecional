@@ -2,35 +2,40 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebas
 import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 
-// --- Configuración de Firebase ---
+// --- Configuración de Firebase (Actualizada con tus datos correctos) ---
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY", // Reemplazar si es necesario
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "page-presupuesto", // Reemplazar con tu Project ID
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId: "YOUR_APP_ID"
+    apiKey: "AIzaSyAMKzspq6eCcM6dctXpBGQSqkn1TxxcD8E",
+    authDomain: "page-presupuesto.firebaseapp.com",
+    projectId: "page-presupuesto",
+    storageBucket: "page-presupuesto.firebasestorage.app", // Corregido según tu captura
+    messagingSenderId: "373225945911",
+    appId: "1:373225945911:web:b5a06df182e942ebc7b8b2",
+    measurementId: "G-TENMTCD3XH"
 };
+// ----------------------------------------------------------------------
 
 // --- Variables Globales ---
-// Usar variables globales si están definidas, de lo contrario usar la configuración de arriba
-const finalFirebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : firebaseConfig;
 const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
-
 let db, auth;
 
 try {
-    const app = initializeApp(finalFirebaseConfig);
+    // Usamos directamente tu configuración
+    const app = initializeApp(firebaseConfig); 
     db = getFirestore(app);
     auth = getAuth(app);
     await signInAnonymously(auth);
-    console.log("Firebase inicializado y usuario anónimo autenticado.");
+    console.log("¡Conexión con Firebase exitosa! La configuración es correcta.");
+    
+    // Habilitamos el formulario una vez que la conexión es exitosa
+    document.getElementById('app-container').style.opacity = '1';
+    document.getElementById('app-container').style.pointerEvents = 'auto';
+
 } catch (error) {
     console.error("Error inicializando Firebase:", error);
-    // Mostrar un error al usuario si la inicialización falla
     const appContainer = document.getElementById('app-container');
     if(appContainer) {
-         appContainer.innerHTML = `<p class="text-red-400 text-center">Error de conexión con la base de datos. Por favor, intente más tarde.</p>`;
+         // Reemplazamos el contenido del formulario con el mensaje de error
+         appContainer.innerHTML = `<div class="text-center p-4"><h2 class="text-xl font-bold mb-2 text-red-400">Error de Conexión</h2><p class="text-gray-300">No se pudo conectar a la base de datos. Verifica que los datos en la variable 'firebaseConfig' dentro de 'script.js' sean correctos y que tu proyecto de Firebase esté activo.</p></div>`;
     }
 }
 
@@ -90,8 +95,6 @@ const generateQuote = async () => {
     
     const selectedServiceType = document.querySelector('input[name="serviceType"]:checked');
     if (!selectedServiceType) {
-        // En lugar de alert, podrías mostrar un mensaje más estilizado.
-        // Por ahora lo mantendremos simple.
         console.warn("Intento de generar cotización sin tipo de servicio.");
         return;
     }
@@ -130,19 +133,20 @@ const generateQuote = async () => {
         createdAt: serverTimestamp()
     };
 
-    // Guardar en Firestore
+    if (!db) {
+        console.error("La base de datos no está inicializada. No se puede guardar la cotización.");
+        return;
+    }
+    
     try {
-        // Usamos una colección pública para las cotizaciones
         const docRef = await addDoc(collection(db, `artifacts/${appId}/public/data/quotes`), quoteData);
         console.log("Cotización guardada con ID: ", docRef.id);
         console.log("Datos enviados:", quoteData);
         
-        // Mostrar modal de éxito
         successModal.classList.remove('hidden');
 
     } catch (e) {
         console.error("Error al guardar la cotización: ", e);
-        // Aquí también podrías mostrar un mensaje de error al usuario.
     }
 };
 
@@ -169,3 +173,5 @@ submitButton.addEventListener('click', generateQuote);
 closeModalButton.addEventListener('click', () => {
      successModal.classList.add('hidden');
 });
+
+
